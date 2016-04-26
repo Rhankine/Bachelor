@@ -1,9 +1,5 @@
 .bar {
-  fill: steelblue;
-}
-
-.bar:hover {
-  fill: brown;
+  fill: #262626;
 }
 
 .axis {
@@ -14,7 +10,6 @@
 .axis line {
   fill: none;
   stroke: #000;
-  shape-rendering: crispEdges;
 }
 
 .x.axis path {
