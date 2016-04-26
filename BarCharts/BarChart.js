@@ -1,3 +1,5 @@
+var exclude = ["HR"]
+
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 500 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -18,6 +20,7 @@ var yAxis = d3.svg.axis()
     .ticks(10);
 
 var svg = d3.select("body").append("svg")
+	.attr("id", "mainchart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -25,9 +28,17 @@ var svg = d3.select("body").append("svg")
 
 d3.tsv("data.tsv", type, function(error, data) {
   if (error) throw error;
-
-  x.domain(data.map(function(d) { return d.department; }));
-  y.domain([0, d3.max(data, function(d) { return d.revenue; })]);
+  
+  for(var key in data) {
+	  var val = data[key].department;
+	  
+	  if(exclude.indexOf(val)!=-1){
+		  delete data[key];
+	  }
+  }
+  
+  x.domain(data.map(function(d) { if(d==null){return} return d.department; }));
+  y.domain([0, d3.max(data, function(d) { if(d==null){return} return d.revenue; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -48,12 +59,14 @@ d3.tsv("data.tsv", type, function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("id", function(d) {return d.department; })
-      .attr("onclick", "removeBar('HR')")
-      .attr("x", function(d) { return x(d.department); })
+      .attr("id", function(d) {if(d==null){return} return d.department; })
+      .on("click", function(d) {
+	  	removeBar(d.department);
+		})
+      .attr("x", function(d) {if(d==null){return} return x(d.department); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.revenue); })
-      .attr("height", function(d) { return height - y(d.revenue); });
+      .attr("y", function(d) {if(d==null){return} return y(d.revenue); })
+      .attr("height", function(d) {if(d==null){return} return height - y(d.revenue); });
 });
 
 function type(d) {
@@ -62,6 +75,6 @@ function type(d) {
 }
 
 function removeBar(id){
-    id = "#"+id;
-    d3.select(id).remove();
+	exclude.push(id);
+	console.log(exclude);
 }
