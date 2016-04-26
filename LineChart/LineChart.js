@@ -1,8 +1,8 @@
 var exclude = ["HR", "Legal"]
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 500 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 1000 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
 	
 	
 var x = d3.scale.ordinal()
@@ -77,15 +77,12 @@ function createBarChart() {
 			var pathcoordinates = "";
 			for(var key in data){
 				if(pathcoordinates==""){
-					pathcoordinates += ("m"+x(data[key].month)+","+y(data[key].revenue));
-					console.log("m"+x(data[key].month)+","+y(data[key].revenue));
+					pathcoordinates += ("m"+(Number(x(data[key].month))+Number(35))+","+(y(data[key].revenue)));
 				}
 				else {
-					pathcoordinates += ("L"+x(data[key].month)+","+y(data[key].revenue));
-					console.log("L"+x(data[key].month)+","+y(data[key].revenue));
+					pathcoordinates += ("L"+(Number(x(data[key].month))+Number(35))+","+y(data[key].revenue));
 				}
 			}
-			console.log(pathcoordinates);
 			return pathcoordinates;
 		});
     });

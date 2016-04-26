@@ -6,7 +6,6 @@ body {
 .axis line {
   fill: none;
   stroke: #000;
-  shape-rendering: crispEdges;
 }
 
 .x.axis path {
@@ -15,6 +14,6 @@ body {
 
 .line {
   fill: none;
-  stroke: steelblue;
+  stroke: #333333;
   stroke-width: 1.5px;
 }
