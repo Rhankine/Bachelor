@@ -1,13 +1,22 @@
-.chart rect {
-  fill: grey;
+.bar {
+  fill: steelblue;
 }
 
-.chart rect:hover{
-    fill: darkslategray;
+.bar:hover {
+  fill: brown;
 }
 
-.chart text {
-  fill: white;
+.axis {
   font: 10px sans-serif;
-  text-anchor: end;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
 }
