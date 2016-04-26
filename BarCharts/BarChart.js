@@ -1,11 +1,12 @@
 var exclude = ["HR", "Legal"]
 
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 500 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
 createBarChart();
 
 function createBarChart() {
-    var margin = {top: 20, right: 20, bottom: 30, left: 40},
-        width = 500 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -79,6 +80,9 @@ function createBarChart() {
         .on("mouseover", function(d) {
             createBaseline(d.department);
             })
+        .on("mouseout", function(d) {
+            removeBaseline();
+            })
         .attr("x", function(d) {if(d==null){return} return x(d.department); })
         .attr("width", x.rangeBand())
         .attr("y", function(d) {if(d==null){return} return y(d.revenue); })
@@ -97,5 +101,18 @@ function removeBar(id){
 }
 
 function createBaseline(id){
-    console.log(id);
+    var yValue = Number(d3.select("#"+id).attr("y")) + Number(margin.top);
+    d3.select("svg").append("line")
+        .attr("id", "baseline")
+        .attr("x1", margin.left)
+        .attr("y1", yValue)
+        .attr("x2", width+margin.left)
+        .attr("y2", yValue)
+        .attr("stroke-width",2)
+        .attr("stroke", "black")
+        .attr("stroke-dasharray", "15, 10");
+}
+
+function removeBaseline(){
+    d3.select("#baseline").remove();
 }
