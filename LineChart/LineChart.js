@@ -20,9 +20,9 @@ var yAxis = d3.svg.axis()
 	.orient("left")
 	.ticks(10);
 
-createBarChart();
+createLineChart();
 
-function createBarChart() {
+function createLineChart() {
 
 
     var svg = d3.select("body").append("svg")
@@ -85,6 +85,23 @@ function createBarChart() {
 			}
 			return pathcoordinates;
 		});
+        
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("id", function(d) {if(d==null){return} return d.month} )
+        .on("mouseover", function(d) {
+            createBaseline(x(d.month), y(d.revenue));
+        })
+        .on("mouseout", function(d) {
+            removeBaseline();
+        })
+        .attr("x", function(d) {if(d==null){return} return x(d.month); })
+        .attr("width", x.rangeBand())
+        .attr("y", 0)
+        .attr("height", Number(height))
+        .attr("opacity", "0")
     });
 }
 function type(d) {
@@ -95,13 +112,14 @@ function type(d) {
 function removeBar(id){
 	exclude.push(id);
 	d3.select("#mainchart").remove();
-    createBarChart();
+    createLineChart();
 }
 
-function createBaseline(id){
-    var yValue = Number(d3.select("#"+id).attr("y")) + Number(margin.top);
+function createBaseline(baseX, baseY){
+    var xValue = Number(baseX+margin.left+35);
+    var yValue = Number(baseY+margin.top);
     d3.select("svg").append("line")
-        .attr("id", "baseline")
+        .attr("id", "baselineY")
         .attr("x1", margin.left)
         .attr("y1", yValue)
         .attr("x2", width+margin.left)
@@ -109,8 +127,18 @@ function createBaseline(id){
         .attr("stroke-width",2)
         .attr("stroke", "black")
         .attr("stroke-dasharray", "15, 10");
+    d3.select("svg").append("line")
+        .attr("id", "baselineX")
+        .attr("x1", xValue)
+        .attr("y1", yValue)
+        .attr("x2", xValue)
+        .attr("y2", height+margin.top)
+        .attr("stroke-width",2)
+        .attr("stroke", "black")
+        .attr("stroke-dasharray", "15, 10");
 }
 
 function removeBaseline(){
-    d3.select("#baseline").remove();
+    d3.select("#baselineX").remove();
+    d3.select("#baselineY").remove();
 }
