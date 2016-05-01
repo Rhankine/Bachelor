@@ -1,4 +1,4 @@
-var exclude = ["HR", "Legal"]
+var exclude = [];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 500 - margin.left - margin.right,
@@ -7,6 +7,8 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
 createBarChart();
 
 function createBarChart() {
+	d3.select("#mainchart").remove();
+    d3.select("#resetbutton").remove();
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .1);
@@ -88,15 +90,24 @@ function createBarChart() {
         .attr("y", function(d) {if(d==null){return} return y(d.revenue); })
         .attr("height", function(d) {if(d==null){return} return height - y(d.revenue); });
     });
+    
+    d3.select("body").append("button")
+        .attr("id", "resetbutton")
+        .text("Reset")
+        .on("click", function(){resetChart(); });
 }
 function type(d) {
   d.revenue = +d.revenue;
   return d;
 }
 
+function resetChart() {
+    exclude = [];
+    createBarChart();
+}
+
 function removeBar(id){
 	exclude.push(id);
-	d3.select("#mainchart").remove();
     createBarChart();
 }
 
