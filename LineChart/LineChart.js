@@ -23,8 +23,9 @@ var yAxis = d3.svg.axis()
 createLineChart();
 
 function createLineChart() {
-
-
+	d3.select("#mainchart").remove();
+    d3.select("#resetbutton").remove();
+    
     var svg = d3.select("body").append("svg")
         .attr("id", "mainchart")
         .attr("width", width + margin.left + margin.right)
@@ -98,7 +99,7 @@ function createLineChart() {
             removeBaseline();
         })
         .on("click", function(d) {
-            removeBar(d.month);
+            removePoint(d.month);
         })
         .attr("x", function(d) {if(d==null){return} return x(d.month); })
         .attr("width", function(d) {if(d==null){return} return x.rangeBand(); })
@@ -106,15 +107,25 @@ function createLineChart() {
         .attr("height", function(d) {if(d==null){return} return Number(height); })
         .attr("opacity", "0")
     });
+    
+    d3.select("body").append("button")
+        .on("click", function(){resetChart();})
+        .text("Reset")
+        .attr("id", "resetbutton");
 }
+
+function resetChart() {
+    exclude = [];
+    createLineChart();
+}
+
 function type(d) {
   d.revenue = +d.revenue;
   return d;
 }
 
-function removeBar(id){
+function removePoint(id){
 	exclude.push(id);
-	d3.select("#mainchart").remove();
     createLineChart();
 }
 
