@@ -1,4 +1,4 @@
-var exclude = ["HR", "Legal"]
+var exclude = [];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 1000 - margin.left - margin.right,
@@ -92,15 +92,18 @@ function createLineChart() {
         .attr("class", "bar")
         .attr("id", function(d) {if(d==null){return} return d.month} )
         .on("mouseover", function(d) {
-            createBaseline(x(d.month), y(d.revenue));
+            if(d==null){return} createBaseline(x(d.month), y(d.revenue));
         })
         .on("mouseout", function(d) {
             removeBaseline();
         })
+        .on("click", function(d) {
+            removeBar(d.month);
+        })
         .attr("x", function(d) {if(d==null){return} return x(d.month); })
-        .attr("width", x.rangeBand())
+        .attr("width", function(d) {if(d==null){return} return x.rangeBand(); })
         .attr("y", 0)
-        .attr("height", Number(height))
+        .attr("height", function(d) {if(d==null){return} return Number(height); })
         .attr("opacity", "0")
     });
 }
