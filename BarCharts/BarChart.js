@@ -76,15 +76,21 @@ function createBarChart() {
         .enter().append("rect")
         .attr("class", "bar")
         .attr("id", function(d) {if(d==null){return} return d.department; })
-        .on("click", function(d) {
+        /*.on("click", function(d) {
             removeBar(d.department);
-            })
+            })*/
         .on("mouseover", function(d) {
             createBaseline(d.department);
-            })
+        })
         .on("mouseout", function(d) {
             removeBaseline();
-            })
+        })
+        .on("drag", function(d){ 
+            d3.select("#"+d.department).attr("x", event.clientX-margin.left-30); 
+        })
+        .on("dragend", function(d){ 
+            d3.select("#"+d.department).attr("x", event.clientX-margin.left-30); 
+        })
         .attr("x", function(d) {if(d==null){return} return x(d.department); })
         .attr("width", x.rangeBand())
         .attr("y", function(d) {if(d==null){return} return y(d.revenue); })
