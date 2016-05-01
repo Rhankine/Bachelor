@@ -108,7 +108,7 @@ function createBaseline(id){
         .attr("y1", yValue)
         .attr("x2", width+margin.left)
         .attr("y2", yValue)
-        .attr("stroke-width",2)
+        .attr("stroke-width",1)
         .attr("stroke", "black")
         .attr("stroke-dasharray", "15, 10");
 }
