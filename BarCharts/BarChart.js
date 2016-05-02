@@ -1,4 +1,4 @@
-var exclude = [];
+var order = ["PAX", "Com", "Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 500 - margin.left - margin.right,
@@ -38,19 +38,14 @@ function createBarChart() {
     for(var key in data) {
         var val = data[key].department;
         
-        if(exclude.indexOf(val)!=-1){
+        if(order.indexOf(val)!=-1){
+            data[order.indexOf(val)+10] = data[key];
             delete data[key];
         }
     }
-    
-    var i = 0;
-    
     for(var key in data) {
-        if(key != i){
-            data[i] = data[key];
-            delete data[key];
-        }
-        i++;
+        data[key-10] = data[key];
+        delete data[key];
     }
     
     x.domain(data.map(function(d) { if(d==null){return} return d.department; }));
@@ -76,9 +71,10 @@ function createBarChart() {
         .enter().append("rect")
         .attr("class", "bar")
         .attr("id", function(d) {if(d==null){return} return d.department; })
-        /*.on("click", function(d) {
+        .on("click", function(d) {
+            console.log(d.department);
             removeBar(d.department);
-            })*/
+            })
         .on("mouseover", function(d) {
             createBaseline(d.department);
         })
@@ -89,12 +85,16 @@ function createBarChart() {
             d3.select("#"+d.department).attr("x", event.clientX-margin.left-30); 
         })
         .on("dragend", function(d){ 
-            d3.select("#"+d.department).attr("x", event.clientX-margin.left-30); 
+            d3.select("#"+d.department).attr("x", event.clientX-margin.left-30);
+            sort();
+            createBarChart();
         })
         .attr("x", function(d) {if(d==null){return} return x(d.department); })
         .attr("width", x.rangeBand())
         .attr("y", function(d) {if(d==null){return} return y(d.revenue); })
         .attr("height", function(d) {if(d==null){return} return height - y(d.revenue); });
+        
+        sort();
     });
     
     d3.select("body").append("button")
@@ -108,12 +108,13 @@ function type(d) {
 }
 
 function resetChart() {
-    exclude = [];
+    order = ["PAX", "Com", "Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
     createBarChart();
 }
 
 function removeBar(id){
-	exclude.push(id);
+	var oId = order.indexOf(oId,1);
+    order.splice(oId);
     createBarChart();
 }
 
@@ -132,4 +133,18 @@ function createBaseline(id){
 
 function removeBaseline(){
     d3.select("#baseline").remove();
+}
+
+function sort(){
+    sortArray = [];
+    order.forEach(function(dep) {
+        sortArray[d3.select("#" + dep).attr("x")] = dep;
+        sortArraySorted = Object.keys(sortArray).sort(function(a,b){return sortArray[a]-sortArray[b]})
+    });
+    order = [];
+    sortArraySorted.forEach(function(d) {
+        order.push(sortArray[d]);
+    })
+    console.log(sortArraySorted);
+    console.log(order);
 }
