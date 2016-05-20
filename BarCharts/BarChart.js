@@ -71,10 +71,10 @@ function createBarChart() {
         .enter().append("rect")
         .attr("class", "bar")
         .attr("id", function(d) {if(d==null){return} return d.department; })
-        .on("click", function(d) {
+        /*.on("click", function(d) {
             console.log(d.department);
             removeBar(d.department);
-            })
+            })*/
         .on("mouseover", function(d) {
             createBaseline(d.department);
         })
