@@ -99,4 +99,5 @@ function resetChart() {
 function removeBar(id){
     console.log(id);
     d3.select("#"+id).remove();
+    
 }
