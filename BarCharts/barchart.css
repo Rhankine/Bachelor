@@ -2,6 +2,10 @@
   fill: #336699;
 }
 
+.drag {
+  cursor: move;
+}
+
 .axis {
   font: 10px sans-serif;
 }
