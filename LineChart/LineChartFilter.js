@@ -3,8 +3,8 @@ var order = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = order.length * 100 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
-	
-	
+
+
 var x = d3.scale.ordinal()
 	.rangeRoundBands([0, width], .1);
 
@@ -19,13 +19,15 @@ var yAxis = d3.svg.axis()
 	.scale(y)
 	.orient("left")
 	.ticks(10);
-    
+
 var svg = d3.select("body").append("svg")
     .attr("id", "mainchart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
 .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+var dataGlobal;
 
 d3.tsv("data.tsv", type, function(error, data) {
 if (error) throw error;
@@ -62,8 +64,10 @@ svg.append("path")
             }
         }
         return pathcoordinates;
-    });   
-     
+    });
+    
+dataGlobal = data;
+
 svg.selectAll(".bar")
     .data(data)
     .enter().append("rect")
@@ -92,9 +96,22 @@ function type(d) {
 function removePoint(id){
 	var oId = order.indexOf(id);
     order.splice(oId,1);
-    
+
     x.domain(order);
     width = order.length * 100 - margin.left - margin.right;
     x.rangeRoundBands([0, width], .1);
     svg.select("#xaxis").call(xAxis);
+    
+    var pathcoordinates = "";
+    for(var key in dataGlobal){
+        if(order.indexOf(dataGlobal[key].month)!=-1){
+            if(pathcoordinates==""){
+                pathcoordinates += ("m"+(Number(x(dataGlobal[key].month))+Number(35))+","+(y(dataGlobal[key].revenue)));
+            }
+            else {
+                pathcoordinates += ("L"+(Number(x(dataGlobal[key].month))+Number(35))+","+y(dataGlobal[key].revenue));
+            }
+        }
+    }
+    svg.select(".line").attr("d", function(){return pathcoordinates});
 }
