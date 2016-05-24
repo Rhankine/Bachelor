@@ -41,7 +41,30 @@ d3.tsv("data.tsv", type, function(error, data) {
       .text(function(d) { return d.data.department; });
 });
 
+d3.select("body").append("table").append("tr").append("td").append("button");
+
 function type(d) {
   d.revenue = +d.revenue;
   return d;
+}
+
+var curAngle = 0;
+var interval = null;
+
+svg.on("mousedown", function(d) {
+    interval = setInterval(goRotateRight,20);
+});
+
+svg.on("mouseup", function(d){
+    clearInterval(interval);
+})
+
+function goRotateRight() {
+    curAngle += 1;
+    svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ") rotate(" + curAngle + "," + 0 + "," + 0 + ")");
+  }
+  
+function goRotateLeft() {
+    curAngle -= 1;
+    svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ") rotate(" + curAngle + "," + 0 + "," + 0 + ")");    
 }
