@@ -85,5 +85,8 @@ function removeBar(id){
     x.rangeRoundBands([0, width], .1);
     svg.select("#xaxis").call(xAxis);
     
-    console.log(order[oId]);
+    for (i = 0; i < order.length; i++){
+        d3.select("#"+order[i]).attr("x", function() {return x(order[i])})
+    .attr("width", x.rangeBand())
+    }
 }
