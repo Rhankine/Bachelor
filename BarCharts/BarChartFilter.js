@@ -20,7 +20,6 @@ var yAxis = d3.svg.axis()
     .ticks(10);
 
 var svg = d3.select("body").append("svg")
-    .attr("id", "mainchart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
 .append("g")
@@ -29,20 +28,7 @@ var svg = d3.select("body").append("svg")
 d3.tsv("data.tsv", type, function(error, data) {
 if (error) throw error;
 
-for(var key in data) {
-    var val = data[key].department;
-    
-    if(order.indexOf(val)!=-1){
-        data[order.indexOf(val)+10] = data[key];
-        delete data[key];
-    }
-}
-for(var key in data) {
-    data[key-10] = data[key];
-    delete data[key];
-}
-
-x.domain(order/*data.map(function(d) { if(d==null){return} return d.department; })*/);
+x.domain(order);
 y.domain([0, d3.max(data, function(d) { if(d==null){return} return d.revenue; })]);
 
 svg.append("g")
@@ -78,7 +64,7 @@ svg.selectAll(".bar")
 d3.select("body").append("button")
     .attr("id", "resetbutton")
     .text("Reset")
-    .on("click", function(){resetChart(); });
+    .on("click", function(){window.location.reload() });
 
 function type(d) {
   d.revenue = +d.revenue;
@@ -91,11 +77,13 @@ function resetChart() {
 
 function removeBar(id){
     d3.select("#"+id).remove();
-	var oId = order.indexOf(id,1);
+	var oId = order.indexOf(id);
     order.splice(oId,1);
-    console.log(order);
+    
     x.domain(order);
-    svg.attr("width", width + margin.left + margin.right)
+    width = order.length * 80 - margin.left - margin.right;
     x.rangeRoundBands([0, width], .1);
     svg.select("#xaxis").call(xAxis);
+    
+    console.log(order[oId]);
 }
