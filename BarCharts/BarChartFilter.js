@@ -71,10 +71,6 @@ function type(d) {
   return d;
 }
 
-function resetChart() {
-    order = ["Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
-}
-
 function removeBar(id){
     d3.select("#"+id).remove();
 	var oId = order.indexOf(id);
