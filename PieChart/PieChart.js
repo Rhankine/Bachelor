@@ -41,15 +41,38 @@ d3.tsv("data.tsv", type, function(error, data) {
       .text(function(d) { return d.data.department; });
 });
 
-d3.select("body").append("table").append("tr").append("td").append("button");
+var curAngle = 0;
+var interval = null;
+
+d3.select("body")
+    .append("table")
+    .append("tr")
+        .attr("id", "turnbutton")
+        .append("td")
+        .append("button")
+            .attr("style", "width=50px")
+            .text("Left")
+            .on("mousedown", function(d) {
+                interval = setInterval(goRotateLeft,20);})
+            .on("mouseup", function(d){
+                clearInterval(interval);})
+            .on("mouseout", function(d){
+                clearInterval(interval);});
+d3.select("#turnbutton")
+    .append("td")
+        .append("button")
+            .attr("style", "width=50px")
+            .text("Right")
+            .on("mousedown", function(d) {
+                interval = setInterval(goRotateRight,20);})
+            .on("mouseup", function(d){
+                clearInterval(interval);});
 
 function type(d) {
   d.revenue = +d.revenue;
   return d;
 }
 
-var curAngle = 0;
-var interval = null;
 
 svg.on("mousedown", function(d) {
     interval = setInterval(goRotateRight,20);
