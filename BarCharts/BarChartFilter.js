@@ -1,3 +1,6 @@
+var file = console.log(Date.now());
+
+
 var order = ["Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -65,7 +68,46 @@ d3.select("body").append("button")
     .attr("id", "resetbutton")
     .text("Reset")
     .on("click", function(){window.location.reload() });
+ 
+ /*   
+d3.select("body").append("br");
+d3.select("body").append("br");
+d3.select("body").append("br");
+d3.select("body").append("br");
 
+d3.select("body").append("form")
+    .append("table").attr("id", "formtable")
+    .attr("cellpadding", 10)
+    .append("tr").attr("id", "radiorow")
+    .append("td")
+    .append("valign", "top").text("Which datapoint is smaller?");
+d3.select("#radiorow").append("td").attr("id", "radio")
+    .append("input").attr("type", "radio")
+    .attr("name", "Department")
+    .attr("value", "Group");
+d3.select("#radio").append("text").text("Group");
+d3.select("#radio").append("br");
+d3.select("#radio").append("input").attr("type", "radio")
+    .attr("name", "Department")
+    .attr("value", "Legal");
+d3.select("#radio").append("text").text("Legal");
+
+d3.select("#formtable").append("tr")
+    .attr("id", "percentrow")
+    .append("td").text("How many percent is the smaller in size of the bigger?");
+d3.select("#percentrow").append("td")
+    .attr("id", "percent")
+    .append("input")
+    .attr("type", "text")
+    .attr("name", "sizeOf")
+    .attr("maxlength", 3)
+    .attr("size", 3);
+d3.select("#percent").append("text").text("%");
+
+d3.select("#formtable").append("tr")
+    .append("td").attr("colspan", 2)
+    .append("input").attr("type", "submit");
+*/
 function type(d) {
   d.revenue = +d.revenue;
   return d;

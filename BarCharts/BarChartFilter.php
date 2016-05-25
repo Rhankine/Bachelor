@@ -8,7 +8,21 @@
 <script src="BarChartFilter.js"></script>
 <br /><br /><br /><br />
 
-<form>
+<?php
+    if(isset($_POST['submit'])) {
+        $department = $_POST['Department'];
+        $sizeOf = $_POST['sizeOf'];
+        $content = "$department, $sizeOf\n";
+        $date = new DateTime();
+        $filename = "Bar".$date->getTimestamp().".csv";
+        
+        $BarFile = fopen($filename, 'a') or die("Unable to open file");
+        fwrite($BarFile, $content);
+        fclose($BarFile);
+        }
+?>
+
+<form action='' method='post'>
     <table cellpadding="10">
         <tr>
             <td valign="top">
@@ -29,7 +43,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit">
+                <input type='submit' name='submit' value='Submit'>
             </td>
         </tr>
     </table>
