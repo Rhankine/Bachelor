@@ -5,10 +5,30 @@
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
+
+<?php
+    session_start();
+    $fn = $_SESSION['filename'];
+    $_SESSION['did'] += 1;
+    $did = $_SESSION['did'];
+    if(isset($_POST['submit'])) {
+        $department = $_POST['Department'];
+        $sizeOf = $_POST['sizeOf'];
+        $content = "barchartBaseline$did, $department, $sizeOf\n";
+        $date = new DateTime();
+        
+        $BarFile = fopen($fn, 'a') or die("Unable to open file");
+        fwrite($BarFile, $content);
+        fclose($BarFile);
+        }
+    echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
+?>
+    
+    
 <script src="BarChartBaseline.js"></script>
 <br /><br /><br /><br />
 
-<form>
+<form action='' method='post'>
     <table cellpadding="10">
         <tr>
             <td valign="top">
@@ -29,7 +49,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit">
+                <input type='submit' name='submit' value='Submit'>
             </td>
         </tr>
     </table>
