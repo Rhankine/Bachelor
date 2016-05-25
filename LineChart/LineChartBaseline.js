@@ -30,7 +30,7 @@ function createLineChart() {
     .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("../Data/data1.tsv", type, function(error, data) {
+    d3.tsv("../DataMon/data1.tsv", type, function(error, data) {
     if (error) throw error;
     
     for(var key in data) {

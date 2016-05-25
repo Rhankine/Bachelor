@@ -25,7 +25,7 @@ var svg = d3.select("body").append("svg")
 .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("../Data/data1.tsv", type, function(error, data) {
+d3.tsv("../DataDep/data1.tsv", type, function(error, data) {
     if (error) throw error;
 
     x.domain(order);
