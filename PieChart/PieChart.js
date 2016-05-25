@@ -23,7 +23,9 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-d3.tsv("../DataDep/data1.tsv", type, function(error, data) {
+var did = d3.select("#h_v").attr("value");
+
+d3.tsv("../DataDep/data"+did+".tsv", type, function(error, data) {
   if (error) throw error;
 
   var g = svg.selectAll(".arc")

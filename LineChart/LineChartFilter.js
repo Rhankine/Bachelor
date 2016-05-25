@@ -29,7 +29,9 @@ var svg = d3.select("body").append("svg")
     
 var dataGlobal;
 
-d3.tsv("../DataMon/data1.tsv", type, function(error, data) {
+var did = d3.select("#h_v").attr("value");
+
+d3.tsv("../DataMon/data"+did+".tsv", type, function(error, data) {
 if (error) throw error;
 
 x.domain(order);

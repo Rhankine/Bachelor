@@ -26,7 +26,6 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var did = d3.select("#h_v").attr("value");
-console.log(did);
 
 d3.tsv("../DataDep/data"+did+".tsv", type, function(error, data) {
     if (error) throw error;
