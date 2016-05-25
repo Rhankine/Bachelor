@@ -38,6 +38,6 @@
     
     <form method="get">
         <input type="hidden" name="pushed" value="is" />
-        <input type="submit" id="btnSubmit" value="Submit" />
+        <input type="submit" id="btnSubmit" value="Continue" />
     </form>
 </body>
