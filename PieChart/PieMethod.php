@@ -9,22 +9,16 @@
 <?php
     session_start();
     $fn = $_SESSION['filename'];
-    $did = $_SESSION['did'];
+    $did = 1;
     if(isset($_POST['submit'])) {
-        $department = $_POST['Department'];
-        $sizeOf = $_POST['sizeOf'];
-        $content = "Piechart$did, $department, $sizeOf\n";
-        $date = new DateTime();
+        $method = $_POST['method'];
+        $content = "PiechartMethod, $method, \n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
         fclose($BarFile);
+        header('Location: /ThankYou.html');
         }
-    $_SESSION['did'] += 1;
-    $did = $_SESSION['did'];
-    if($did > 15){
-        header('Location: /PieChart/PieMethod.php');
-    }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
@@ -36,19 +30,10 @@
     <table cellpadding="10">
         <tr>
             <td valign="top">
-                Which pie is smaller?
+                How did you perform, your judgement of the chart?
             </td>
             <td>
-                <input type="radio" name="Department" value="HR" required> HR<br />
-                <input type="radio" name="Department" value="Shipping"> Shipping
-            </td>
-        </tr>
-        <tr>
-            <td>
-                How many percent is the smaller in size of the bigger?
-            </td>
-            <td>
-                <input type="text" name="sizeOf"maxlength="3" size="3" required>%
+                <textarea name="method" rows="10" cols="30" required>The cat was playing in the garden.</textarea>
             </td>
         </tr>
         <tr>
