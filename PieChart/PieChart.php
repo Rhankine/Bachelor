@@ -23,7 +23,7 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: http://localhost/ThankYou.html');
+        header('Location: /ThankYou.html');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
@@ -39,8 +39,8 @@
                 Which pie is smaller?
             </td>
             <td>
-                <input type="radio" name="Department" value="PAX"> PAX<br />
-                <input type="radio" name="Department" value="Procurement"> Procurement
+                <input type="radio" name="Department" value="HR"> HR<br />
+                <input type="radio" name="Department" value="Shipping"> Shipping
             </td>
         </tr>
         <tr>
