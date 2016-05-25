@@ -23,7 +23,7 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: /ThankYou.html');
+        header('Location: /LineChart/LineBaseMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>

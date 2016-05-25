@@ -33,7 +33,7 @@
                 How did you perform, your judgement of the chart?
             </td>
             <td>
-                <textarea name="method" rows="10" cols="30" required>The cat was playing in the garden.</textarea>
+                <textarea name="method" rows="10" cols="30" required></textarea>
             </td>
         </tr>
         <tr>
