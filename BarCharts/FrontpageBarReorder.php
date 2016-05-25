@@ -3,23 +3,23 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['did'] = 0;
-        header('Location: /LineChart/LineChartFilter.php');    
+        header('Location: /BarCharts/BarChartReorder.php');    
     }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Reorder</title>
 </head>
 <body>
-    <h1>Filtering</h1>
-    <p>In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has the interaction type filtering.
-        <br />This means that you can click on any point in the line chart and make that point disappear.<br />
-        If you regret filtering the data, you can press the reset button, in the button of the chart.
+    <h1>Reorder</h1>
+    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type reorder.
+        <br />This means that you can drag a bar, by clicking the bar, holding the mousebutton and moving the bar. The bar will be attached 
+        the place you release it near and the other bars will be rearranged accordingly.
     </p>
     <p>
-        <img src="line.jpg" border="5"><br />
+        <img src="Bar.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

@@ -3,23 +3,22 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['did'] = 0;
-        header('Location: /LineChart/LineChartFilter.php');    
+        header('Location: /BarCharts/BarChartBaseline.php');    
     }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Baseline</title>
 </head>
 <body>
-    <h1>Filtering</h1>
-    <p>In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has the interaction type filtering.
-        <br />This means that you can click on any point in the line chart and make that point disappear.<br />
-        If you regret filtering the data, you can press the reset button, in the button of the chart.
+    <h1>Baseline</h1>
+    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type baseline.
+        <br />This means that you can hover the mouse over bar in the bar chart and make a horizontal line appear as a baseline for that bar (see image below).
     </p>
     <p>
-        <img src="line.jpg" border="5"><br />
+        <img src="Base.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

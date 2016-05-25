@@ -2,7 +2,6 @@
     session_start();
     if(isset($_GET['pushed'])){
         $date = new DateTime();
-        $_SESSION['filename'] = "./log/line".$date->getTimestamp().".csv";
         $_SESSION['did'] = 0;
         header('Location: /LineChart/LineChartBaseline.php');    
     }
@@ -19,7 +18,6 @@
         <br />This means that you can hover the mouse over point in the line chart and make a horizontal line appear as a baseline for that datapoint (see image below).
     </p>
     <p>
-        Each of the 30 pages will look similar to the image below.<br />
         <img src="baseline.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 

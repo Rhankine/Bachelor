@@ -9,7 +9,6 @@
 <?php
     session_start();
     $fn = $_SESSION['filename'];
-    $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
@@ -21,6 +20,11 @@
         fwrite($BarFile, $content);
         fclose($BarFile);
         }
+    $_SESSION['did'] += 1;
+    $did = $_SESSION['did'];
+    if($did > 15){
+        header('Location: /ThankYou.html');
+    }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
