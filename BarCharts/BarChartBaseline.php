@@ -10,6 +10,7 @@
     session_start();
     $fn = $_SESSION['filename'];
     $did = $_SESSION['did'];
+    $studyno = $_SESSION['studyno']; 
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
@@ -23,7 +24,26 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: /ThankYou.html');
+        switch ($studyno) {
+            case '0':
+                header('Location: /ThankYou.html');
+                break;
+            case '1':
+                header('Location: /BarCharts/FrontpageBarReorder.php');
+                break;
+            case '2':
+                header('Location: /ThankYou.html');
+                break;
+            case '3':
+                header('Location: /BarCharts/FrontpageBarFilter.php');
+                break;
+            case '4':
+                header('Location: /BarCharts/FrontpageBarFilter.php');
+                break;
+            case '5':
+                header('Location: /BarCharts/FrontpageBarReorder.php');
+                break;
+        }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
