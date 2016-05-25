@@ -1,6 +1,3 @@
-var file = console.log(Date.now());
-
-
 var order = ["Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -28,7 +25,10 @@ var svg = d3.select("body").append("svg")
 .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("../DataDep/data1.tsv", type, function(error, data) {
+var did = d3.select("#h_v").attr("value");
+console.log(did);
+
+d3.tsv("../DataDep/data"+did+".tsv", type, function(error, data) {
 if (error) throw error;
 
 x.domain(order);

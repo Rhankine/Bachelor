@@ -5,24 +5,28 @@
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
-<script src="BarChartFilter.js"></script>
-<br /><br /><br /><br />
 
 <?php
     session_start();
     $fn = $_SESSION['filename'];
+    $_SESSION['did'] += 1;
+    $did = $_SESSION['did'];
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
-        $content = "$department, $sizeOf\n";
+        $content = "barchartFilter$did, $department, $sizeOf\n";
         $date = new DateTime();
-        $filename = "Bar".$date->getTimestamp().".csv";
         
-        $BarFile = fopen($filename, 'a') or die("Unable to open file");
+        $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
         fclose($BarFile);
         }
+    echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
+    
+    
+<script src="BarChartFilter.js"></script>
+<br /><br /><br /><br />
 
 <form action='' method='post'>
     <table cellpadding="10">
