@@ -9,6 +9,8 @@
 <br /><br /><br /><br />
 
 <?php
+    session_start();
+    $fn = $_SESSION['filename'];
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
