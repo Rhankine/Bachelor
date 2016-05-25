@@ -24,26 +24,7 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        switch ($studyno) {
-            case '0':
-                header('Location: /ThankYou.html');
-                break;
-            case '1':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
-                break;
-            case '2':
-                header('Location: /ThankYou.html');
-                break;
-            case '3':
-                header('Location: /BarCharts/FrontpageBarFilter.php');
-                break;
-            case '4':
-                header('Location: /BarCharts/FrontpageBarFilter.php');
-                break;
-            case '5':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
-                break;
-        }
+        header('Location: /BarCharts/BarBaseMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
@@ -59,8 +40,8 @@
                 Which datapoint is smaller?
             </td>
             <td>
-                <input type="radio" name="Department" value="Jan" required> Jan<br />
-                <input type="radio" name="Department" value="Apr"> Apr
+                <input type="radio" name="Department" value="Group" required> Group<br />
+                <input type="radio" name="Department" value="Legal"> Legal
             </td>
         </tr>
         <tr>
