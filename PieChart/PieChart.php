@@ -32,7 +32,7 @@
     <table cellpadding="10">
         <tr>
             <td valign="top">
-                Which datapoint is smaller?
+                Which pie is smaller?
             </td>
             <td>
                 <input type="radio" name="Department" value="PAX"> PAX<br />
