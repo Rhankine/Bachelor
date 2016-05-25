@@ -39,8 +39,8 @@
                 Which datapoint is smaller?
             </td>
             <td>
-                <input type="radio" name="Department" value="PAX"> PAX<br />
-                <input type="radio" name="Department" value="Procurement"> Procurement
+                <input type="radio" name="Department" value="Jan" required> Jan<br />
+                <input type="radio" name="Department" value="Apr"> Apr
             </td>
         </tr>
         <tr>
@@ -48,7 +48,7 @@
                 How many percent is the smaller in size of the bigger?
             </td>
             <td>
-                <input type="text" name="sizeOf"maxlength="3" size="3">%
+                <input type="text" name="sizeOf"maxlength="3" size="3" required>%
             </td>
         </tr>
         <tr>

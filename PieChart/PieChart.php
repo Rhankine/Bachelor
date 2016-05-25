@@ -39,7 +39,7 @@
                 Which pie is smaller?
             </td>
             <td>
-                <input type="radio" name="Department" value="HR"> HR<br />
+                <input type="radio" name="Department" value="HR" required> HR<br />
                 <input type="radio" name="Department" value="Shipping"> Shipping
             </td>
         </tr>
@@ -48,7 +48,7 @@
                 How many percent is the smaller in size of the bigger?
             </td>
             <td>
-                <input type="text" name="sizeOf"maxlength="3" size="3">%
+                <input type="text" name="sizeOf"maxlength="3" size="3" required>%
             </td>
         </tr>
         <tr>
