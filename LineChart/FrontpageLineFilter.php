@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Filter</title>
 </head>
 <body>
     <h1>Filtering</h1>

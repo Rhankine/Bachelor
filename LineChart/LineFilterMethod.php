@@ -18,11 +18,11 @@
         fwrite($BarFile, $content);
         fclose($BarFile);
         $studyno = $_SESSION['studyno'];
-        if($studyno = '0'){
-            header('Location: ./FrontpageLineBase.php');            
+        if($studyno = '1'){
+            header('Location: ./../ThankYou.php');
         }
         else {
-            header('Location: ./../ThankYou.html');
+            header('Location: ./FrontpageLineBase.php');
         }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
