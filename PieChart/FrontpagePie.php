@@ -2,9 +2,9 @@
     session_start();
     if(isset($_GET['pushed'])){
         $date = new DateTime();
-        $_SESSION['filename'] = "./log/line".$date->getTimestamp().".csv";
+        $_SESSION['filename'] = "./log/pie".$date->getTimestamp().".csv";
         $_SESSION['did'] = 0;
-        header('Location: /PieChart/PieChart.php');    
+        header('Location: ./PieChart.php');    
     }
 ?>
 

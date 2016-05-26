@@ -23,13 +23,13 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: /PieChart/PieMethod.php');
+        header('Location: ./PieMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="PieChart.js"></script>
+<script src="./PieChart.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>
