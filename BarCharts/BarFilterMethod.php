@@ -29,13 +29,13 @@
                 header('Location: /BarCharts/FrontpageBarBase.php');
                 break;
             case '3':
-                header('Location: /ThankYou.html');
+                header('Location: /ThankYou.php');
                 break;
             case '4':
                 header('Location: /BarCharts/FrontpageBarReorder.php');
                 break;
             case '5':
-                header('Location: /ThankYou.html');
+                header('Location: /ThankYou.php');
                 break;
         }
     }

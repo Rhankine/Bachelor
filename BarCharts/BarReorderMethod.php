@@ -23,7 +23,7 @@
                 header('Location: /BarCharts/FrontpageBarBase.php');
                 break;
             case '1':
-                header('Location: /ThankYou.html');
+                header('Location: /ThankYou.php');
                 break;
             case '2':
                 header('Location: /BarCharts/FrontpageBarFilter.php');
@@ -32,7 +32,7 @@
                 header('Location: /BarCharts/FrontpageBarBase.php');
                 break;
             case '4':
-                header('Location: /ThankYou.html');
+                header('Location: /ThankYou.php');
                 break;
             case '5':
                 header('Location: /BarCharts/FrontpageBarFilter.php');
