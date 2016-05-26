@@ -19,17 +19,17 @@
         fclose($BarFile);
         $studyno = $_SESSION['studyno'];
         if($studyno = '1'){
-            header('Location: /LineChart/FrontpageLineFilter.php');            
+            header('Location: ./FrontpageLineFilter.php');            
         }
         else {
-            header('Location: /ThankYou.html');
+            header('Location: ./../ThankYou.html');
         }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="LineChartBaseline.js"></script>
+<script src="./LineChartBaseline.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

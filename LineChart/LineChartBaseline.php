@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="LineChart.css">
+    <link rel="stylesheet" type="text/css" href="./LineChart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
@@ -23,13 +23,13 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: /LineChart/LineBaseMethod.php');
+        header('Location: ./LineBaseMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="LineChartBaseline.js"></script>
+<script src="./LineChartBaseline.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

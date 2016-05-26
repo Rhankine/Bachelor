@@ -8,13 +8,13 @@
         $_SESSION['studyno'] = $studyNo;
         switch ($studyNo) {
             case '0':
-                header('Location: /LineChart/FrontpageLineFilter.php');
+                header('Location: ./FrontpageLineFilter.php');
                 break;
             case '1':
-                header('Location: /LineChart/FrontpageLineBase.php');
+                header('Location: ./FrontpageLineBase.php');
                 break;            
             default:
-                header('Location: /');
+                header('Location: ./');
                 break;
         }
     }
@@ -33,7 +33,7 @@
     </p>
     <p>
         Each of the 30 pages will look similar to the image below.<br />
-        <img src="line.jpg" border="5"><br />
+        <img src="./line.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

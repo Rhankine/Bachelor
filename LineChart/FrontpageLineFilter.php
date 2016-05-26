@@ -3,7 +3,7 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['did'] = 0;
-        header('Location: /LineChart/LineChartFilter.php');    
+        header('Location: ./LineChartFilter.php');    
     }
 ?>
 
@@ -19,7 +19,7 @@
         If you regret filtering the data, you can press the reset button, in the button of the chart.
     </p>
     <p>
-        <img src="line.jpg" border="5"><br />
+        <img src="./line.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

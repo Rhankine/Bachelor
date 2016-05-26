@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="LineChart.css">
+    <link rel="stylesheet" type="text/css" href="./LineChart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
@@ -19,17 +19,17 @@
         fclose($BarFile);
         $studyno = $_SESSION['studyno'];
         if($studyno = '0'){
-            header('Location: /LineChart/FrontpageLineBase.php');            
+            header('Location: ./FrontpageLineBase.php');            
         }
         else {
-            header('Location: /ThankYou.html');
+            header('Location: ./../ThankYou.html');
         }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="LineChartFilter.js"></script>
+<script src="./LineChartFilter.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>
