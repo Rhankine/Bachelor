@@ -21,7 +21,7 @@
     </p>
     <p>
         Each of the 15 pages will look similar to the image below.<br />
-        <img src="pie.jpg" border="5"><br />
+        <img src="./pie.jpg" border="5"><br />
         Just below the chart, there are two buttons: left and right. These will rotate the pie counterclockwise 
         and clockwise respectively.<br />
         Below this, you will see the two questions. <br />
