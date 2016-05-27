@@ -9,15 +9,27 @@
         fwrite($LogFile, $content);
         fclose($LogFile);
         $_SESSION['did'] = 0;
-        $studyNo = rand(0,1);
+        $studyNo = rand(0,5);
         $_SESSION['studyno'] = $studyNo;
         switch ($studyNo) {
             case '0':
-                header('Location: ./FrontpageLineFilter.php');
+                header('Location: ./FrontpageLineNoInt.php');
                 break;
             case '1':
+                header('Location: ./FrontpageLineNoInt.php');
+                break;
+            case '2':
                 header('Location: ./FrontpageLineBase.php');
-                break;            
+                break;
+            case '3':
+                header('Location: ./FrontpageLineBase.php');
+                break;
+            case '4':
+                header('Location: ./FrontpageLineFilter.php');
+                break;
+            case '5':
+                header('Location: ./FrontpageLineFilter.php');
+                break;
             default:
                 header('Location: ./');
                 break;

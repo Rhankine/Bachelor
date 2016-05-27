@@ -22,11 +22,25 @@
         fwrite($BarFile, $content);
         fclose($BarFile);
         $studyno = $_SESSION['studyno'];
-        if($studyno = '1'){
-            header('Location: ./ThankYou.php');
-        }
-        else {
-            header('Location: ./FrontpageLineBase.php');
+        switch ($studyno) {
+            case '0':
+                header('Location: ./ThankYou.php');
+                break;
+            case '1':
+                header('Location: ./FrontpageLineBase.php');
+                break;
+            case '2':
+                header('Location: ./ThankYou.php');
+                break;
+            case '3':
+                header('Location: ./FrontpageLineNoInt.php');
+                break;
+            case '4':
+                header('Location: ./FrontpageLineNoInt.php');
+                break;
+            case '5':
+                header('Location: ./FrontpageLineBase.php');
+                break;
         }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
