@@ -13,6 +13,12 @@
         $Country = $_POST['Country'];
         $content = "BarChartGeographics,,,,,,,,$age,$education,$Country,$fn\n";
         
+        $attentionChartType = $_POST['attentionChartType'];
+        $attentionNoValues = $_POST['attentionNoValues'];
+        if(!($attentionChartType==='Bar chart' && $attentionNoValues==6)){
+            header('Location: ./../NoPayment.php');
+        }
+        
         $logFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($logFile, $content);
         fclose($logFile);
@@ -70,6 +76,29 @@
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Which chart type did you see?
+            </td>
+            <td>
+                <select name="attentionChartType" required>
+                        <option value="Histogram">Histogram</option>
+                        <option value="Flow chart">Flow chart</option>
+                        <option value="Pie chart">Pie chart</option>
+                        <option value="Line chart">Line chart</option>
+                        <option value="Area chart">Area chart</option>
+                        <option value="Bar chart">Bar chart</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                How many values were in each of the charts?
+            </td>
+            <td>
+                <input type="text" name="attentionNoValues" maxlength="1" size="1" required>
             </td>
         </tr>
         <tr>
