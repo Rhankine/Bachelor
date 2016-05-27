@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./BarChart.css">
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
 
@@ -24,12 +22,13 @@
             <p>Thank you for participating in this study.</p>");
         session_destroy();
     }
-?>
-<h3>About you</h3>
+    else{
+        echo('
+            <h3>About you</h3>
 <p>
     Please fill in the following information about you.
 </p>
-<form action='' method='post'>
+<form action="" method="post">
     <table cellpadding="10">
         <tr>
             <td valign="top">
@@ -74,9 +73,13 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type='submit' name='submit' value='Submit'>
+                <input type="submit" name="submit" value="Submit">
             </td>
         </tr>
     </table>
 </form>
+        ');
+    }
+?>
+
 </body>

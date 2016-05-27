@@ -26,7 +26,7 @@
             header('Location: ./FrontpageLineFilter.php');            
         }
         else {
-            header('Location: ./../ThankYou.php');
+            header('Location: ./ThankYou.php');
         }
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");

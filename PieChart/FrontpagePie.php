@@ -2,9 +2,9 @@
     session_start();
     if(isset($_GET['pushed'])){
         $date = new DateTime();
-        $_SESSION['filename'] = "./log/pie".$date->getTimestamp().".csv";
+        $_SESSION['filename'] = "./../log/pie".$date->getTimestamp().".csv";
         $fn = $_SESSION['filename'];
-        $content = "LineID,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments\n";
+        $content = "LineID,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments,age,education,Country\n";
         $LogFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($LogFile, $content);
         fclose($LogFile);

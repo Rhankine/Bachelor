@@ -23,7 +23,7 @@
         fclose($BarFile);
         $studyno = $_SESSION['studyno'];
         if($studyno = '1'){
-            header('Location: ./../ThankYou.php');
+            header('Location: ./ThankYou.php');
         }
         else {
             header('Location: ./FrontpageLineBase.php');
