@@ -39,8 +39,8 @@
                 Which datapoint is smaller?
             </td>
             <td>
-                <input type="radio" name="Department" value="Jan" required> Jan<br />
-                <input type="radio" name="Department" value="Apr"> Apr
+                <input type="radio" name="Department" value="Feb" required> Feb<br />
+                <input type="radio" name="Department" value="May"> May
             </td>
         </tr>
         <tr>
