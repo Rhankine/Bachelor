@@ -19,7 +19,8 @@
         
         echo("
             <h1>Thank you.</h1>
-            <p>Thank you for participating in this study.</p>");
+            <p>Thank you for participating in this study.</p>
+            <p><strong> Your code for Crowdflower is: UbgrF5j3IOrMEU5</strong></p>");
         session_destroy();
     }
     else{
