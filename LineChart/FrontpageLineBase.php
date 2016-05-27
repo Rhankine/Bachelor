@@ -10,15 +10,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="./LineChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Baseline</title>
 </head>
 <body>
     <h1>Baseline</h1>
     <p>In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has the interaction type baseline.
-        <br />This means that you can hover the mouse over point in the line chart and make a horizontal line appear as a baseline for that datapoint (see image below).
+        <br />This means that you can hover the mouse over point in the line chart and make a horizontal line appear as a baseline for that datapoint, you can try on the chart below.
     </p>
+        <input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./LineChartBaseline.js"></script>
     <p>
-        <img src="./baseline.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />
