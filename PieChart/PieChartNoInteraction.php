@@ -10,11 +10,13 @@
     session_start();
     $fn = $_SESSION['filename'];
     $did = $_SESSION['did'];
+    $date = new DateTime();
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
-        $content = "PieChartNoInteraction$did, $department, $sizeOf,,,,,,,,,$fn\n";
-        $date = new DateTime();
+        $timestart = $_POST['timestart'];
+        $timeend = $date->format("H:i:s");
+        $content = "PieChartNoInteraction$did, $department, $sizeOf,,,,,,,,,$fn,$timestart,$timeend\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
@@ -25,7 +27,7 @@
     if($did > 15){
         header('Location: ./PieChartNoInteractionMethod.php');
     }
-    echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
+    echo("<input type='hidden' value='$did' id='h_v' class='h_v'>");
 ?>
     
     
@@ -53,6 +55,11 @@
         </tr>
         <tr>
             <td colspan="2">
+                <?php
+                    $date = new DateTime();
+                    $now = $date->format("H:i:s");
+                    echo("<input type='hidden' value='$now' name='timestart'>");
+                ?>
                 <input type='submit' name='submit' value='Submit'>
             </td>
         </tr>
