@@ -3,6 +3,11 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['filename'] = "./log/line".$date->getTimestamp().".csv";
+        $fn = $_SESSION['filename'];
+        $content = "LineID,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments\n";
+        $LogFile = fopen($fn, 'a') or die("Unable to open file");
+        fwrite($LogFile, $content);
+        fclose($LogFile);
         $_SESSION['did'] = 0;
         $studyNo = rand(0,1);
         $_SESSION['studyno'] = $studyNo;
