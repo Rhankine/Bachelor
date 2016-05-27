@@ -16,7 +16,7 @@
         $liked = $_POST['liked'];
         $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "BarchartFilterMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
+        $content = "BarchartNoInteractionMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
@@ -24,16 +24,16 @@
         $studyno = $_SESSION['studyno'];
         switch ($studyno) {
             case '0':
-                header('Location: ./ThankYou.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             case '1':
-                header('Location: ./FrontpageBarReorder.php');
+                header('Location: ./FrontpageBarFilter.php');
                 break;
             case '2':
-                header('Location: ./FrontpageBarNoInteraction.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             case '3':
-                header('Location: ./FrontpageBarReorder.php');
+                header('Location: ./ThankYou.php');
                 break;
         }
     }
@@ -41,7 +41,7 @@
 ?>
     
     
-<script src="./BarChartFilter.js"></script>
+<script src="./BarChartNoInteraction.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

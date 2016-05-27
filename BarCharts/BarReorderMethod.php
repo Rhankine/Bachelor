@@ -24,7 +24,7 @@
         $studyno = $_SESSION['studyno'];
         switch ($studyno) {
             case '0':
-                header('Location: ./FrontpageBarBase.php');
+                header('Location: ./FrontpageBarFilter.php');
                 break;
             case '1':
                 header('Location: ./ThankYou.php');
@@ -34,12 +34,6 @@
                 break;
             case '3':
                 header('Location: ./FrontpageBarBase.php');
-                break;
-            case '4':
-                header('Location: ./ThankYou.php');
-                break;
-            case '5':
-                header('Location: ./FrontpageBarFilter.php');
                 break;
         }
     }
