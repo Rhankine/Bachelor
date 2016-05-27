@@ -48,7 +48,8 @@
     </p>
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
-        But do not hurry, I seek to log a time as realistic as possible.    
+        But do not hurry, I seek to log a time as realistic as possible.<br />
+        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
     </p>
     
     <form method="get">
