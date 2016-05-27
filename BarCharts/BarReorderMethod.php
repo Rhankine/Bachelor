@@ -27,7 +27,7 @@
                 header('Location: ./FrontpageBarBase.php');
                 break;
             case '1':
-                header('Location: ./../ThankYou.php');
+                header('Location: ./ThankYou.php');
                 break;
             case '2':
                 header('Location: ./FrontpageBarFilter.php');
@@ -36,7 +36,7 @@
                 header('Location: ./FrontpageBarBase.php');
                 break;
             case '4':
-                header('Location: ./../ThankYou.php');
+                header('Location: ./ThankYou.php');
                 break;
             case '5':
                 header('Location: ./FrontpageBarFilter.php');

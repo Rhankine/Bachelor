@@ -33,13 +33,13 @@
                 header('Location: ./FrontpageBarBase.php');
                 break;
             case '3':
-                header('Location: ./../ThankYou.php');
+                header('Location: ./ThankYou.php');
                 break;
             case '4':
                 header('Location: ./FrontpageBarReorder.php');
                 break;
             case '5':
-                header('Location: ./../ThankYou.php');
+                header('Location: ./ThankYou.php');
                 break;
         }
     }
