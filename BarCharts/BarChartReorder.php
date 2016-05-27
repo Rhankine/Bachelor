@@ -10,11 +10,14 @@
     session_start();
     $fn = $_SESSION['filename'];
     $did = $_SESSION['did'];
+    $date = new DateTime();
     $studyno = $_SESSION['studyno']; 
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
-        $content = "barchartReorder$did, $department, $sizeOf,,,,,,,,,$fn\n";
+        $timestart = $_POST['timestart'];
+        $timeend = $date->format("H:i:s");
+        $content = "barchartReorder$did, $department, $sizeOf,,,,,,,,,$fn,$timestart,$timeend\n";
         $date = new DateTime();
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
@@ -54,6 +57,11 @@
         </tr>
         <tr>
             <td colspan="2">
+                <?php
+                    $date = new DateTime();
+                    $now = $date->format("H:i:s");
+                    echo("<input type='hidden' value='$now' name='timestart'>");
+                ?>
                 <input type='submit' name='submit' value='Submit'>
             </td>
         </tr>
