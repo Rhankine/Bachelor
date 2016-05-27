@@ -14,7 +14,7 @@
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
-        $content = "barchartFilter$did, $department, $sizeOf\n";
+        $content = "barchartFilter$did, $department, $sizeOf,,,,,,,,,$fn\n";
         $date = new DateTime();
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");

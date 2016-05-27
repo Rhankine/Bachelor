@@ -11,7 +11,7 @@
         $age = $_POST['age'];
         $education = $_POST['education'];
         $Country = $_POST['Country'];
-        $content = ",,,,,,,,$age,$education,$Country\n";
+        $content = "PiechartGeographics,,,,,,,,$age,$education,$Country,$fn\n";
         
         $logFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($logFile, $content);

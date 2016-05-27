@@ -16,7 +16,7 @@
         $liked = $_POST['liked'];
         $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "LinechartFilterMethod,,,$extend,$strategy,$liked,$improvement,$comments\n";
+        $content = "LinechartFilterMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
