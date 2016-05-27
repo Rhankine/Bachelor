@@ -2,7 +2,7 @@
     session_start();
     if(isset($_GET['pushed'])){
         $date = new DateTime();
-        $_SESSION['filename'] = "./log/line".$date->getTimestamp().".csv";
+        $_SESSION['filename'] = "./log/bar".$date->getTimestamp().".csv";
         $_SESSION['did'] = 0;
         $studyNo = rand(0,5);
         $_SESSION['studyno'] = $studyNo;
