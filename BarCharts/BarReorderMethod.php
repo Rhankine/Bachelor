@@ -16,7 +16,7 @@
         $liked = $_POST['liked'];
         $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "BarchartReorderMethod, $extend, $strategy, $liked, $improvement, $comments \n";
+        $content = "BarchartReorderMethod,,,$extend,$strategy,$liked,$improvement,$comments\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
