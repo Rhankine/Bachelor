@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="BarChart.css">
+    <link rel="stylesheet" type="text/css" href="./BarChart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
@@ -20,22 +20,22 @@
         $studyno = $_SESSION['studyno'];
         switch ($studyno) {
             case '0':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
+                header('Location: ./FrontpageBarReorder.php');
                 break;
             case '1':
-                header('Location: /BarCharts/FrontpageBarBase.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             case '2':
-                header('Location: /BarCharts/FrontpageBarBase.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             case '3':
-                header('Location: /ThankYou.php');
+                header('Location: ./../ThankYou.php');
                 break;
             case '4':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
+                header('Location: ./FrontpageBarReorder.php');
                 break;
             case '5':
-                header('Location: /ThankYou.php');
+                header('Location: ./../ThankYou.php');
                 break;
         }
     }
@@ -43,7 +43,7 @@
 ?>
     
     
-<script src="BarChartFilter.js"></script>
+<script src="./BarChartFilter.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

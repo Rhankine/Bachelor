@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="barchart.css">
+    <link rel="stylesheet" type="text/css" href="./barchart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
@@ -24,13 +24,13 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: /BarCharts/BarFilterMethod.php');
+        header('Location: ./BarFilterMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="BarChartFilter.js"></script>
+<script src="./BarChartFilter.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

@@ -28,7 +28,7 @@ var svg = d3.select("body").append("svg")
 
 var did = d3.select("#h_v").attr("value");
 
-d3.tsv("../DataDep/data"+did+".tsv", type, function(error, data) {
+d3.tsv("./../DataDep/data"+did+".tsv", type, function(error, data) {
 if (error) throw error;
 
 for(var key in data) {

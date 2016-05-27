@@ -3,7 +3,7 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['did'] = 0;
-        header('Location: /BarCharts/BarChartBaseline.php');    
+        header('Location: ./BarChartBaseline.php');    
     }
 ?>
 
@@ -18,7 +18,7 @@
         <br />This means that you can hover the mouse over bar in the bar chart and make a horizontal line appear as a baseline for that bar (see image below).
     </p>
     <p>
-        <img src="Base.jpg" border="5"><br />
+        <img src="./Base.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

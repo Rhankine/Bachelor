@@ -3,7 +3,7 @@
     if(isset($_GET['pushed'])){
         $date = new DateTime();
         $_SESSION['did'] = 0;
-        header('Location: /BarCharts/BarChartReorder.php');    
+        header('Location: ./BarChartReorder.php');    
     }
 ?>
 
@@ -19,7 +19,7 @@
         the place you release it near and the other bars will be rearranged accordingly.
     </p>
     <p>
-        <img src="Bar.jpg" border="5"><br />
+        <img src="./Bar.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

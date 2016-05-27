@@ -8,25 +8,25 @@
         $_SESSION['studyno'] = $studyNo;
         switch ($studyNo) {
             case '0':
-                header('Location: /BarCharts/FrontpageBarFilter.php');
+                header('Location: ./FrontpageBarFilter.php');
                 break;
             case '1':
-                header('Location: /BarCharts/FrontpageBarFilter.php');
+                header('Location: ./FrontpageBarFilter.php');
                 break;
             case '2':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
+                header('Location: ./FrontpageBarReorder.php');
                 break;
             case '3':
-                header('Location: /BarCharts/FrontpageBarReorder.php');
+                header('Location: ./FrontpageBarReorder.php');
                 break;
             case '4':
-                header('Location: /BarCharts/FrontpageBarBase.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             case '5':
-                header('Location: /BarCharts/FrontpageBarBase.php');
+                header('Location: ./FrontpageBarBase.php');
                 break;
             default:
-                header('Location: /');
+                header('Location: ./');
                 break;
         }
     }
@@ -45,7 +45,7 @@
     </p>
     <p>
         Each of the 45 pages will look similar to the image below.<br />
-        <img src="Bar.jpg" border="5"><br />
+        <img src="./Bar.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />
