@@ -15,8 +15,7 @@
         
         $attentionChartType = $_POST['attentionChartType'];
         $attentionNoValues = $_POST['attentionNoValues'];
-        $attentionInteraction = $_POST['attentionInteraction'];
-        if(!($attentionChartType==='Pie chart' && $attentionNoValues==6 && $attentionInteraction==="Rotate")){
+        if(!($attentionChartType==='Pie chart' && $attentionNoValues==6)){
             header('Location: ./../NoPayment.php');
         }
         
@@ -100,20 +99,6 @@
             </td>
             <td>
                 <input type="text" name="attentionNoValues" maxlength="1" size="1" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Which type of interaction were you able to use?
-            </td>
-            <td>
-                <select name="attentionInteraction" required>
-                        <option value="Highlight value">Highlight value</option>
-                        <option value="Reorder">Reorder</option>
-                        <option value="Rotate">Rotate</option>
-                        <option value="Filter">Filter</option>
-                        <option value="Baseline">Baseline</option>
-                </select>
             </td>
         </tr>
         <tr>

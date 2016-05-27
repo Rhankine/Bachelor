@@ -13,7 +13,7 @@
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
-        $content = "Piechart$did, $department, $sizeOf,,,,,,,,,$fn\n";
+        $content = "PieChartNoInteraction$did, $department, $sizeOf,,,,,,,,,$fn\n";
         $date = new DateTime();
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
@@ -23,13 +23,13 @@
     $_SESSION['did'] += 1;
     $did = $_SESSION['did'];
     if($did > 15){
-        header('Location: ./PieMethod.php');
+        header('Location: ./PieChartNoInteractionMethod.php');
     }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="./PieChart.js"></script>
+<script src="./PieChartNoInteraction.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>

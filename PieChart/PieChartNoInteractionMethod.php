@@ -16,18 +16,28 @@
         $liked = $_POST['liked'];
         $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "PiechartMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
+        $content = "PieChartNoInteractionMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
-        fclose($BarFile);
-        header('Location: ./ThankYou.php');
+        fclose($BarFile);$studyno = $_SESSION['studyno'];
+        switch ($studyno) {
+            case '0':
+                header('Location: ./FrontpagePieRotate.php');
+                break;
+            case '1':
+                header('Location: ./ThankYou.php');
+                break;
+            default:
+                header('location: ./');
+                break;
+        }
         }
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
     
-<script src="./PieChart.js"></script>
+<script src="./PieChartNoInteraction.js"></script>
 <br /><br /><br /><br />
 
 <form action='' method='post'>
