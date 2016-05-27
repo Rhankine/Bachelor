@@ -10,16 +10,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="./BarChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Reorder</title>
 </head>
 <body>
     <h1>Reorder</h1>
     <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type reorder.
         <br />This means that you can drag a bar, by clicking the bar, holding the mousebutton and moving the bar. The bar will be attached 
-        the place you release it near and the other bars will be rearranged accordingly.
+        the place you release it near and the other bars will be rearranged accordingly. . You can try on the chart below.
     </p>
+        <input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./BarChartBaseline.js"></script>
     <p>
-        <img src="./Bar.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

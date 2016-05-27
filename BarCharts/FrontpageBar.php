@@ -44,7 +44,7 @@
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will meet 45 pages, each with a bar chart and 2 question. 
+    <p>In this study you will meet 45 pages, each with a bar chart and 2 question. It will take you about 45 minutes to complete.<br />
         You will be asked to compare 2 of the bars in the bar chart and tell, how big - in percent - the smaller bar is of the bigger.<br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>

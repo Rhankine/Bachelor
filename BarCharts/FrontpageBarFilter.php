@@ -10,16 +10,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="./BarChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Filter</title>
 </head>
 <body>
     <h1>Filter</h1>
     <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type filter.
-        <br />This means that you can click on any bar in the bar chart and make that bar disappear.<br />
+        <br />This means that you can click on any bar in the bar chart and make that bar disappear. You can try on the chart below.<br />
         If you regret filtering the data, you can press the reset button, in the button of the chart.
     </p>
+        <input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./BarChartFilter.js"></script>
     <p>
-        <img src="./Bar.jpg" border="5"><br />
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />
