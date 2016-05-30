@@ -17,7 +17,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(1);
+    .ticks(0);
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
