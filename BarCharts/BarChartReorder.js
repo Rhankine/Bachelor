@@ -81,22 +81,6 @@ function type(d) {
   return d;
 }
 
-function removeBar(id){
-    d3.select("#"+id).remove();
-	var oId = order.indexOf(id);
-    order.splice(oId,1);
-    
-    x.domain(order);
-    width = order.length * 80 - margin.left - margin.right;
-    x.rangeRoundBands([0, width], .1);
-    svg.select("#xaxis").call(xAxis);
-    
-    for (i = 0; i < order.length; i++){
-        d3.select("#"+order[i]).attr("x", function() {return x(order[i])})
-    .attr("width", x.rangeBand())
-    }
-}
-
 function sort(){
     sortArray = [];
     order.forEach(function(dep) {
