@@ -85,11 +85,6 @@ svg.selectAll(".bar")
     .attr("opacity", "0")
 });
 
-d3.select("body").append("button")
-    .on("click", function(){window.location.reload() })
-    .text("Reset")
-    .attr("id", "resetbutton");
-
 function type(d) {
   d.revenue = +d.revenue;
   return d;
