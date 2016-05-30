@@ -46,12 +46,13 @@
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will see 45 pages, each with a line chart and 2 question. It will take you about 15-18 minutes to complete.<br /> 
-        You will be asked to compare 2 of the points in the line chart and tell, how big - in percent - the smaller valued point is of the bigger.<br />
+    <p>
+        In this study you will see 45 pages, each with a line chart and 2 question. It will take you about 15-18 minutes to complete.<br />
+        Please read the instructions carefully and pay close attention while doing this job as you might not get paid otherwise. <br />We will ask you questions to test your level of attention.<br /><br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
-        Each of the 30 pages will look similar to the image below.<br />
+        An example of the line charts can be seen below.<br />
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./LineChartNoInteraction.js"></script>
@@ -66,7 +67,6 @@
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
         But do not hurry, I seek to log a time as realistic as possible.<br />
-        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
     </p>
     
     <form method="get">

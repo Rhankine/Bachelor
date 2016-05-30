@@ -46,7 +46,7 @@
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
-        An example of the barcharts can be seen below.<br />
+        An example of the bar charts can be seen below.<br />
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartNoInteraction.js"></script>

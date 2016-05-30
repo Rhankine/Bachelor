@@ -34,25 +34,27 @@
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will see 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
-        You will be asked to compare 2 of the slices in the pie chart and tell, how big - in percent - the smaller slice is of the bigger.<br />
+    <p>
+        In this study you will see 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
+        Please read the instructions carefully and pay close attention while doing this job as you might not get paid otherwise. <br />We will ask you questions to test your level of attention.<br /><br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
-        Each of the 30 pages will have a chart like the one below.
+        An example of the pie charts can be seen below.
+    </p>
         <br /><input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./PieChartNoInteraction.js"></script>
-        Below this, you will see the two questions. <br />
+    <p>
+        You will see the two questions. <br />
         The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent of the bigger slice, the smaller will fill.<br />
+        how many percent the value of the smaller valued datapoint is of the bigger.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
         But do not hurry, I seek to log a time as realistic as possible.<br />
-        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
     </p>
     
     <form method="get">
