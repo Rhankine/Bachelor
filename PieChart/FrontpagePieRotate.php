@@ -1,13 +1,6 @@
 <?php
     session_start();
     if(isset($_GET['pushed'])){
-        $date = new DateTime();
-        $_SESSION['filename'] = "./../log/pie".$date->getTimestamp().".csv";
-        $fn = $_SESSION['filename'];
-        $content = "LineID,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments,age,education,Country,UserId\n";
-        $LogFile = fopen($fn, 'a') or die("Unable to open file");
-        fwrite($LogFile, $content);
-        fclose($LogFile);
         $_SESSION['did'] = 0;
         header('Location: ./PieChartRotate.php');    
     }
@@ -25,15 +18,14 @@
     <p>In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has the interaction type rotate.
         <br />This means that you can press either of the buttons left and right, which will make the pie chart turn counterclockwise or clockwiser respectively. You can try on the chart below.
     </p>
-    <p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./PieChartRotate.js"></script>
-        It is your choice if you want to use the interaction or not.<br /><br />
-        Below this, you will see the two questions. <br />
+    <p>
+        You will see the two questions. <br />
         The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent of the bigger slice, the smaller will fill.<br />
+        how many percent the value of the smaller valued datapoint is of the bigger.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>

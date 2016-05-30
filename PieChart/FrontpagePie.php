@@ -2,7 +2,7 @@
     session_start();
     if(isset($_GET['pushed'])){
         $date = new DateTime();
-        $_SESSION['filename'] = "./../log/line".$date->getTimestamp().".csv";
+        $_SESSION['filename'] = "./../log/pie".$date->getTimestamp().".csv";
         $fn = $_SESSION['filename'];
         $content = "LineID,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments,age,education,Country,UserId\n";
         $LogFile = fopen($fn, 'a') or die("Unable to open file");
@@ -49,7 +49,7 @@
         The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent the value of the smaller valued datapoint is of the bigger.<br />
+        how many percent the value of the smaller valued slice is of the bigger.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>
