@@ -28,17 +28,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="./PieChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Page Title</title>
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will meet 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
+    <p>In this study you will see 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
         You will be asked to compare 2 of the slices in the pie chart and tell, how big - in percent - the smaller slice is of the bigger.<br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
-        Each of the 30 pages will have a chart like the one below.<br />
-        <img src="./pie.jpg" border="5"><br />
+        Each of the 30 pages will have a chart like the one below.
+        <br /><input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./PieChartNoInteraction.js"></script>
         Below this, you will see the two questions. <br />
         The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />

@@ -41,16 +41,21 @@
 <html>
 <head>
     <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="./LineChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will meet 45 pages, each with a line chart and 2 question. It will take you about 15-18 minutes to complete.<br /> 
+    <p>In this study you will see 45 pages, each with a line chart and 2 question. It will take you about 15-18 minutes to complete.<br /> 
         You will be asked to compare 2 of the points in the line chart and tell, how big - in percent - the smaller valued point is of the bigger.<br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
         Each of the 30 pages will look similar to the image below.<br />
-        <img src="./line.jpg" border="5"><br />
+    </p>
+        <input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./LineChartNoInteraction.js"></script>
+    <p>
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />

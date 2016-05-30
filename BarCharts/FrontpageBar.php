@@ -35,16 +35,22 @@
 <html>
 <head>
     <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="./barchart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will meet 60 pages, each with a bar chart and 2 question. It will take you about 18-20 minutes to complete.<br />
-        You will be asked to compare 2 of the bars in the bar chart and tell, how big - in percent - the smaller bar is of the bigger.<br />
+    <p>
+        In this study you will see 60 pages, each with a bar chart and 2 question. It will take you about 18-20 minutes to complete.<br />
+        Please read the instructions carefully and pay close attention while doing this job as you might not get paid otherwise. <br />We will ask you questions to test your level of attention.<br /><br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
-        Each of the 45 pages will look similar to the image below.<br />
-        <img src="./Bar.jpg" border="5"><br />
+        An example of the barcharts can be seen below.<br />
+    </p>
+        <input type='hidden' value='test' id='h_v' class='h_v'>
+        <script src="./BarChartNoInteraction.js"></script>
+    <p>
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />
@@ -55,7 +61,6 @@
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
         But do not hurry, I seek to log a time as realistic as possible.<br />
-        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
     </p>
     
     <form method="get">
