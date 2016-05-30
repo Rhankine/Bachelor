@@ -1,4 +1,5 @@
 var order = ["Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
+var original = ["Group", "HR", "Procurement", "Legal", "Shipping", "Sales"];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = order.length * 80 - margin.left - margin.right,
@@ -74,7 +75,7 @@ d3.tsv("../DataDep/data"+did+".tsv", type, function(error, data) {
 d3.select("body").append("button")
     .attr("id", "resetbutton")
     .text("Reset")
-    .on("click", function(){window.location.reload() });
+    .on("click", function(){ reset(); });
 
 function type(d) {
   d.revenue = +d.revenue;
@@ -91,6 +92,18 @@ function sort(){
     sortArraySorted.forEach(function(d) {
         order.push(sortArray[d]);
     })
+    
+    x.domain(order);
+    svg.select("#xaxis").call(xAxis);
+    
+    for (i = 0; i < order.length; i++){
+        d3.select("#"+order[i]).attr("x", function() {return x(order[i])})
+    .attr("width", x.rangeBand())
+    }
+}
+
+function reset(){
+    order = original;
     
     x.domain(order);
     svg.select("#xaxis").call(xAxis);
