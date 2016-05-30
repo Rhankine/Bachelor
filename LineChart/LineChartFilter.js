@@ -18,7 +18,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
 	.scale(y)
 	.orient("left")
-	.ticks(10);
+	.ticks(1);
 
 var svg = d3.select("body").append("svg")
     .attr("id", "mainchart")
