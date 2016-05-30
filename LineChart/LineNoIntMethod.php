@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./LineChart.css">
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
-<body>
-
 <?php
     session_start();
     $fn = $_SESSION['filename'];
@@ -43,6 +35,13 @@
                 break;
         }
     }
+    echo('<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./LineChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>');
     echo("<input type='hidden' value='".$did."' id='h_v' class='h_v'>");
 ?>
     
