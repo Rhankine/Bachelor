@@ -31,18 +31,6 @@ var did = d3.select("#h_v").attr("value");
 d3.tsv("./../DataDep/data"+did+".tsv", type, function(error, data) {
 if (error) throw error;
 
-for(var key in data) {
-    var val = data[key].department;
-    
-    if(order.indexOf(val)!=-1){
-        data[order.indexOf(val)+10] = data[key];
-        delete data[key];
-    }
-}
-for(var key in data) {
-    data[key-10] = data[key];
-    delete data[key];
-}
 
 x.domain(data.map(function(d) { if(d==null){return} return d.department; }));
 y.domain([0, d3.max(data, function(d) { if(d==null){return} return d.revenue; })]);
