@@ -24,7 +24,7 @@
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartFilter.js"></script>
-        <form action="./FrontpageLineFilter.php" method="post">
+        <form action="./FrontpageBarFilter.php" method="post">
             <input type="submit" value="Reset">
         </form>
     <p>

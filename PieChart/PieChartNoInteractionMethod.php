@@ -3,12 +3,9 @@
     $fn = $_SESSION['filename'];
     $did = 1;
     if(isset($_POST['submit'])) {
-        $extend = $_POST['extend'];
         $strategy = $_POST['strategy'];
-        $liked = $_POST['liked'];
-        $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "PieChartNoInteractionMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
+        $content = "PieChartNoInteractionMethod,,,,$strategy,,,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
@@ -44,38 +41,10 @@
     <table cellpadding="10">
         <tr>
             <td valign="top">
-                To what extend did you use the interaction?
-            </td>
-            <td>
-                <input type="radio" name="extend" value="Always" required>Always<br />
-                <input type="radio" name="extend" value="Most of the time">Most of the time<br />
-                <input type="radio" name="extend" value="Sometimes">Sometimes<br />
-                <input type="radio" name="extend" value="Rarely">Rarely<br />
-                <input type="radio" name="extend" value="Never">Never<br />
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
                 Please descripe how you solved the tasks.
             </td>
             <td>
                 <textarea name="strategy" rows="5" cols="30" required></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                How did you like this interaction?
-            </td>
-            <td>
-                <textarea name="liked" rows="5" cols="30" required></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                How could the interaction be improved?
-            </td>
-            <td>
-                <textarea name="improvement" rows="5" cols="30" required></textarea>
             </td>
         </tr>
         <tr>

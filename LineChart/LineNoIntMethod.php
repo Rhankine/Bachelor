@@ -3,12 +3,9 @@
     $fn = $_SESSION['filename'];
     $did = 1;
     if(isset($_POST['submit'])) {
-        $extend = $_POST['extend'];
         $strategy = $_POST['strategy'];
-        $liked = $_POST['liked'];
-        $improvement = $_POST['improvement'];
         $comments = $_POST['comments'];
-        $content = "LinechartNoInteractionMethod,,,$extend,$strategy,$liked,$improvement,$comments,,,,$fn\n";
+        $content = "PieChartNoInteractionMethod,,,,$strategy,,,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
@@ -57,6 +54,14 @@
             </td>
             <td>
                 <textarea name="strategy" rows="5" cols="30" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Do you have any comments?
+            </td>
+            <td>
+                <textarea name="comments" rows="5" cols="30"></textarea>
             </td>
         </tr>
         <tr>
