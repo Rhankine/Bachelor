@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-
 <?php
     session_start();
     $fn = $_SESSION['filename'];
@@ -23,6 +17,14 @@
         fwrite($logFile, $content);
         fclose($logFile);
         
+        echo('<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./barchart.css">
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+    '); 
         echo("
             <h1>Thank you.</h1>
             <p>Thank you for participating in this study.</p>
@@ -30,6 +32,14 @@
         session_destroy();
     }
     else{
+        echo('<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./barchart.css">
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+    ');
         echo('
             <h3>About you</h3>
 <p>

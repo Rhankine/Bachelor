@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="./BarChart.css">
+    <link rel="stylesheet" type="text/css" href="./barchart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Reorder</title>
 </head>

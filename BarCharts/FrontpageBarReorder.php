@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="./BarChart.css">
+    <link rel="stylesheet" type="text/css" href="./barchart.css">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <title>Reorder</title>
 </head>
@@ -21,7 +21,7 @@
         the place you release it near and the other bars will be rearranged accordingly. . You can try on the chart below.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
-        <script src="./BarChartBaseline.js"></script>
+        <script src="./BarChartReorder.js"></script>
     <p>
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
