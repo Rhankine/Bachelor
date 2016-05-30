@@ -20,10 +20,15 @@
         In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has the interaction type filtering.<br />
         This means that you can click on any point in the line chart and make that point disappear. You can try on the chart below<br />
         If you regret filtering the data, you can press the reset button, in the button of the chart.<br />
+    </p>
+    <p>
         It is your choice if you want to use the interaction or not.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./LineChartFilter.js"></script>
+        <form action="./FrontpageLineFilter.php" method="post">
+            <input type="submit" value="Reset">
+        </form>
     <p>
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 

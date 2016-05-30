@@ -19,6 +19,8 @@
     <p>
         In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has the interaction type baseline.<br />
         This means that you can hover the mouse over point in the line chart and make a horizontal line appear as a baseline for that datapoint, you can try on the chart below.<br />
+    </p>
+    <p>
         It is your choice if you want to use the interaction or not.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>

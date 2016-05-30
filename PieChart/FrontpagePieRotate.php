@@ -23,8 +23,7 @@
 <body>
     <h1>Rotate</h1>
     <p>In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has the interaction type rotate.
-        <br />This means that you can press either of the buttons left and right, which will make the pie chart turn counterclockwise or clockwiser respectively. You can try on the chart below.<br />
-        It is your choice if you want to use the interaction or not.
+        <br />This means that you can press either of the buttons left and right, which will make the pie chart turn counterclockwise or clockwiser respectively. You can try on the chart below.
     </p>
     <p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
