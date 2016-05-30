@@ -25,6 +25,9 @@
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartReorder.js"></script>
+        <form action="./FrontpageLineFilter.php" method="post">
+            <input type="submit" value="Reset">
+        </form>
     <p>
         You will see the two questions. <br />
         The first one "Which datapoint is smaller?". 
