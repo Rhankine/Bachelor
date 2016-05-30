@@ -27,7 +27,7 @@
         The first one "Which datapoint is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent the value of the smaller valued datapoint is of the bigger.<br />
+        how many percent the value of the bar is of the bigger.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>
