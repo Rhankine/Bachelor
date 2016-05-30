@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./PieChart.css">
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
-<body>
-
 <?php
     session_start();
     $fn = $_SESSION['filename'];
@@ -27,10 +19,16 @@
     if($did > 15){
         header('Location: ./PieChartNoInteractionMethod.php');
     }
+    echo('<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./PieChart.css">
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>');
     echo("<input type='hidden' value='$did' id='h_v' class='h_v'>");
 ?>
-    
-    
+
 <script src="./PieChartNoInteraction.js"></script>
 <br /><br /><br /><br />
 

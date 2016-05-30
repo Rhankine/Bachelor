@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-
 <?php
     session_start();
     $fn = $_SESSION['filename'];
@@ -23,14 +17,22 @@
         fwrite($logFile, $content);
         fclose($logFile);
         
-        echo("
+        echo("<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
             <h1>Thank you.</h1>
             <p>Thank you for participating in this study.</p>
             <p><strong> Your code for Crowdflower is: UbgrF5j3IOrMEU5</strong></p>");
         session_destroy();
     }
     else{
-        echo('
+        echo('<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
             <h3>About you</h3>
 <p>
     Please fill in the following information about you.
