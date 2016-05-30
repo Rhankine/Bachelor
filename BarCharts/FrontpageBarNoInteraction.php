@@ -16,7 +16,8 @@
 </head>
 <body>
     <h1>No interaction</h1>
-    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This line chart has no possibility of interacting. 
+    <p>
+        In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has no possibility of interacting. 
         The judgement of this will only be by the basic appearance.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>

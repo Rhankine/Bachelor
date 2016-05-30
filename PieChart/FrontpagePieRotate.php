@@ -23,7 +23,8 @@
 <body>
     <h1>Rotate</h1>
     <p>In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has the interaction type rotate.
-        <br />This means that you can press either of the buttons left and right, which will make the pie chart turn counterclockwise or clockwiser respectively. You can try on the chart below.
+        <br />This means that you can press either of the buttons left and right, which will make the pie chart turn counterclockwise or clockwiser respectively. You can try on the chart below.<br />
+        It is your choice if you want to use the interaction or not.
     </p>
     <p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
@@ -39,7 +40,9 @@
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
         But do not hurry, I seek to log a time as realistic as possible.<br />
-        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
+    </p>
+    <p>
+        Please click continue when you are ready to start the tasks.
     </p>
     
     <form method="get">

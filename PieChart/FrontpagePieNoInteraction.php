@@ -21,8 +21,9 @@
     <title>Page Title</title>
 </head>
 <body>
-    <h1>No interaction</h1>
-    <p>In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has no possibility of interacting. The judgement of this will only be by the basic appearance.
+    <h1>No interaction</h1><p>
+        In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has no possibility of interacting. 
+        The judgement of this will only be by the basic appearance.
     </p>
     <p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
@@ -36,8 +37,10 @@
     </p>
     <p>
         The time spent completing a task will be logged. Please do focus on the tasks while performing them. 
-        But do not hurry, I seek to log a time as realistic as possible.<br />
-        Please be aware that there will appear some easy questions, to verify that you pay attention. You will not be payed if you do not correctly answers these. 
+        But do not hurry, I seek to log a time as realistic as possible.
+    </p>
+    <p>
+        Please click continue when you are ready to start the tasks.
     </p>
     
     <form method="get">
