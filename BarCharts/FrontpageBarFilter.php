@@ -16,9 +16,11 @@
 </head>
 <body>
     <h1>Filter</h1>
-    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type filter.
-        <br />This means that you can click on any bar in the bar chart and make that bar disappear. You can try on the chart below.<br />
-        If you regret filtering the data, you can press the reset button, in the button of the chart.
+    <p>
+        In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type filter.<br />
+        This means that you can click on any bar in the bar chart and make that bar disappear. You can try on the chart below.<br />
+        If you regret filtering the data, you can press the reset button, in the button of the chart.<br />
+        It is your choice if you want to use the interaction or not.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartFilter.js"></script>

@@ -16,9 +16,12 @@
 </head>
 <body>
     <h1>Reorder</h1>
-    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type reorder.
-        <br />This means that you can drag a bar, by clicking the bar, holding the mousebutton and moving the bar. The bar will be attached 
-        the place you release it near and the other bars will be rearranged accordingly. . You can try on the chart below.
+    <p>
+        In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type reorder.<br />
+        This means that you can drag a bar, by clicking the bar, holding the mousebutton and moving the bar. <br />The bar will be attached 
+        the place you release it near and the other bars will be rearranged accordingly. You can try on the chart below.<br />
+        If you regret filtering the data, you can press the reset button, in the button of the chart.<br />
+        It is your choice if you want to use the interaction or not.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartReorder.js"></script>

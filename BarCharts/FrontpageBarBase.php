@@ -16,8 +16,10 @@
 </head>
 <body>
     <h1>Baseline</h1>
-    <p>In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type baseline.
-        <br />This means that you can hover the mouse over bar in the bar chart and make a horizontal line appear as a baseline for that bar. You can try on the chart below.
+    <p>
+        In the next 15 tasks, you will be presented with a bar chart, like the one bellow. This bar chart has the interaction type baseline.<br />
+        This means that you can hover the mouse over bar in the bar chart and make a horizontal line appear as a baseline for that bar. You can try on the chart below.<br />
+        It is your choice if you want to use the interaction or not.
     </p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./BarChartBaseline.js"></script>
