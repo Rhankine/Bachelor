@@ -32,7 +32,7 @@
 </head>
 <body>
     <h1>Welcome to this user perception study.</h1>
-    <p>In this study you will meet 30 pages, each with a pie chart and 2 question. It will take you about 30 minutes to complete.<br />
+    <p>In this study you will meet 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
         You will be asked to compare 2 of the pies in the pie chart and tell, how big - in percent - the smaller pie is of the bigger.<br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
