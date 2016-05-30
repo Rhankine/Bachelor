@@ -36,7 +36,7 @@
     <table cellpadding="10">
         <tr>
             <td valign="top">
-                Which pie is smaller?
+                Which slice is smaller?
             </td>
             <td>
                 <input type="radio" name="Department" value="HR" required> HR<br />

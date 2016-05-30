@@ -33,17 +33,17 @@
 <body>
     <h1>Welcome to this user perception study.</h1>
     <p>In this study you will meet 30 pages, each with a pie chart and 2 question. It will take you about 10-12 minutes to complete.<br />
-        You will be asked to compare 2 of the pies in the pie chart and tell, how big - in percent - the smaller pie is of the bigger.<br />
+        You will be asked to compare 2 of the slices in the pie chart and tell, how big - in percent - the smaller slice is of the bigger.<br />
         You will have the possibility of using some sort of interaction, which will be explained later.
     </p>
     <p>
         Each of the 30 pages will have a chart like the one below.<br />
         <img src="./pie.jpg" border="5"><br />
         Below this, you will see the two questions. <br />
-        The first one "Which pie is smaller?". 
+        The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent of the bigger pie, the smaller will fill.<br />
+        how many percent of the bigger slice, the smaller will fill.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>

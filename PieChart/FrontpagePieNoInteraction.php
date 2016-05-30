@@ -22,16 +22,16 @@
 </head>
 <body>
     <h1>No interaction</h1>
-    <p>In the next 15 tasks, you will be presented with a line chart, like the one bellow. This line chart has no possibility of interacting. The judgement of this will only be by the basic appearance.
+    <p>In the next 15 tasks, you will be presented with a pie chart, like the one bellow. This pie chart has no possibility of interacting. The judgement of this will only be by the basic appearance.
     </p>
     <p>
         <input type='hidden' value='test' id='h_v' class='h_v'>
         <script src="./PieChartNoInteraction.js"></script>
         Below this, you will see the two questions. <br />
-        The first one "Which pie is smaller?". 
+        The first one "Which slice is smaller?". 
         To this question, please click the button you believe is correct.<br />
         The second question "How many percent is the smaller in size of the bigger?", is asking you to judge, 
-        how many percent of the bigger pie, the smaller will fill.<br />
+        how many percent of the bigger slice, the smaller will fill.<br />
         When you have filled in the two question, please click submit, and you will be taken to the next task.
     </p>
     <p>
