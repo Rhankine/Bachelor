@@ -8,8 +8,7 @@
         $content = "LineChartGeographics,,,,,,,,$age,$education,$Country,$fn\n";
         
         $attentionChartType = $_POST['attentionChartType'];
-        $attentionNoValues = $_POST['attentionNoValues'];
-        if(!($attentionChartType==='Line chart' && $attentionNoValues==6)){
+        if(!($attentionChartType==='Line chart')){
             header('Location: ./../NoPayment.php');
         }
         
@@ -24,7 +23,8 @@
 <body>
             <h1>Thank you.</h1>
             <p>Thank you for participating in this study.</p>
-            <p><strong> Your code for Crowdflower is: UbgrF5j3IOrMEU5</strong></p>");
+            <p><strong> Your code for Crowdflower is: UbgrF5j3IOrMEU5</strong><br />
+            You need to copy this code, and insert it into the form in Crowdflower to get paid.</p>");
         session_destroy();
     }
     else{
@@ -46,6 +46,7 @@
             <td>
                 <select name="age" required>
                     <option value="Under 20">Under 20</option>
+                    <option value="20-29">20-29</option>
                     <option value="30-39">30-39</option>
                     <option value="40-49">40-49</option>
                     <option value="50-59">50-59</option>
@@ -58,12 +59,17 @@
                 Education level:
             </td>
             <td>
-                <input type="text" name="education" required>
+                <select name="education" required>
+                    <option value="High school degree or less">High school degree or less</option>
+                    <option value="Some college">Some college</option>
+                    <option value="College degree">College degree</option>
+                    <option value="Post-grad degree">Post-grad degree</option>
+                </select>
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Country:
+                Country of residence:
             </td>
             <td>
                 <input type="text" name="Country" required>
@@ -86,21 +92,12 @@
             </td>
             <td>
                 <select name="attentionChartType" required>
-                        <option value="Histogram">Histogram</option>
                         <option value="Flow chart">Flow chart</option>
                         <option value="Pie chart">Pie chart</option>
                         <option value="Line chart">Line chart</option>
                         <option value="Area chart">Area chart</option>
                         <option value="Bar chart">Bar chart</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                How many values were in each of the charts?
-            </td>
-            <td>
-                <input type="text" name="attentionNoValues" maxlength="1" size="1" required>
             </td>
         </tr>
         <tr>
