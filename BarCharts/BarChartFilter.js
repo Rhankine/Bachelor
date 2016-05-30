@@ -63,11 +63,6 @@ svg.selectAll(".bar")
     .attr("height", function(d) {if(d==null){return} return height - y(d.revenue); });
 });
 
-d3.select("body").append("button")
-    .attr("id", "resetbutton")
-    .text("Reset")
-    .on("click", function(){window.location.reload() });
-    
 function type(d) {
   d.revenue = +d.revenue;
   return d;

@@ -3,7 +3,10 @@
     $fn = $_SESSION['filename'];
     $did = $_SESSION['did'];
     $date = new DateTime();
-    $studyno = $_SESSION['studyno']; 
+    $studyno = $_SESSION['studyno'];
+    if(isset($_POST['reset'])){
+        $_SESSION['did'] -= 1;
+    } 
     if(isset($_POST['submit'])) {
         $department = $_POST['Department'];
         $sizeOf = $_POST['sizeOf'];
@@ -34,6 +37,10 @@
     
     
 <script src="./BarChartFilter.js"></script>
+<form action="./BarChartFilter.php" method="post">
+    <input type="hidden" name="reset" value="set">
+    <input type="submit" value="Reset">
+</form>
 <br /><br /><br /><br />
 
 <form action='' method='post'>
