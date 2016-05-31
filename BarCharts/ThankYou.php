@@ -6,7 +6,8 @@
         $education = $_POST['education'];
         $Country = $_POST['Country'];
         $attentionChartType = $_POST['attentionChartType'];
-        $content = "BarChartGeographics,,,,,,,,,,,$age,$education,$Country,$fn,,\nBarChartAttentionTest,,,,,,,,,,,,,,,,,$attentionChartType";
+        $attentionNoValues = $_POST['attentionNoValues'];
+        $content = "BarChartGeographics,,,,,,,,,,,$age,$education,$Country,$fn,,\nBarChartAttentionTest,,,,,,,,,,,,,,,,,$attentionChartType,$attentionNoValues";
         if(!($attentionChartType==='Bar chart')){
             header('Location: ./../NoPayment.php');
         }
@@ -105,6 +106,14 @@
                         <option value="Area chart">Area chart</option>
                         <option value="Bar chart">Bar chart</option>
                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                How many values did the charts contain?
+            </td>
+            <td>
+                <input type="text" name="attentionNoValues" maxlength="2" size="2" required>
             </td>
         </tr>
         <tr>
