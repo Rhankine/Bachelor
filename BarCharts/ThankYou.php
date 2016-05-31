@@ -5,7 +5,7 @@
         $age = $_POST['age'];
         $education = $_POST['education'];
         $Country = $_POST['Country'];
-        $content = "BarChartGeographics,,,,,,,,$age,$education,$Country,$fn\n";
+        $content = "BarChartGeographics,,,,,,,,,,,$age,$education,$Country,$fn\n";
         
         $attentionChartType = $_POST['attentionChartType'];
         if(!($attentionChartType==='Bar chart')){

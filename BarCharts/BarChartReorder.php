@@ -9,7 +9,10 @@
         $sizeOf = $_POST['sizeOf'];
         $timestart = $_POST['timestart'];
         $timeend = $date->format("H:i:s");
-        $content = "barchartReorder$did, $department, $sizeOf,,,,,,,,,$fn,$timestart,$timeend\n";
+        include_once("./../answer.php");
+        $ansVal = percentAnswer($did);
+        $ansDep = depAnswer($did);
+        $content = "barchartReorder,$did,$ansDep,$ansVal,$department,$sizeOf,,,,,,,,,$fn,$timestart,$timeend\n";
         $date = new DateTime();
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");

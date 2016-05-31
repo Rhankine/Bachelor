@@ -5,7 +5,7 @@
     if(isset($_POST['submit'])) {
         $strategy = $_POST['strategy'];
         $comments = $_POST['comments'];
-        $content = "PieChartNoInteractionMethod,,,,$strategy,,,$comments,,,,$fn\n";
+        $content = "LineChartNoInteractionMethod,,,,,,$strategy,,,$comments,,,,$fn\n";
         
         $BarFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($BarFile, $content);
