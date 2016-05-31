@@ -7,8 +7,10 @@
         $Country = $_POST['Country'];
         $attentionChartType = $_POST['attentionChartType'];
         $attentionNoValues = $_POST['attentionNoValues'];
+        if($attentionChartType=='Bar chart'){$attentionChartType='Correct';}
+        if($attentionNoValues=='6'){$attentionNoValues='Correct';}
         $content = "BarChartGeographics,,,,,,,,,,,$age,$education,$Country,$fn,,\nBarChartAttentionTest,,,,,,,,,,,,,,,,,$attentionChartType,$attentionNoValues";
-        if(!($attentionChartType==='Bar chart')){
+        if(!($attentionChartType==='Correct')){
             header('Location: ./../NoPayment.php');
         }
         

@@ -4,7 +4,7 @@
         $date = new DateTime();
         $_SESSION['filename'] = "./../log/line".$date->getTimestamp().".csv";
         $fn = $_SESSION['filename'];
-        $content = "LineID,trialno,AnswerDep,AnswerVal,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments,age,education,Country,UserId,StartTime,EndTime,AttentionQuestion\n";
+        $content = "LineID,trialno,AnswerDep,AnswerVal,Smallest Datapoint,Percent,Extend,Strategy,Liked,Improvement,Comments,age,education,Country,UserId,StartTime,EndTime,AttentionQuestionType,AttentionQuestionNumber\n";
         $LogFile = fopen($fn, 'a') or die("Unable to open file");
         fwrite($LogFile, $content);
         fclose($LogFile);
