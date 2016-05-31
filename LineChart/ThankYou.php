@@ -5,9 +5,8 @@
         $age = $_POST['age'];
         $education = $_POST['education'];
         $Country = $_POST['Country'];
-        $content = "LineChartGeographics,,,,,,,,,,,$age,$education,$Country,$fn\n";
-        
         $attentionChartType = $_POST['attentionChartType'];
+        $content = "LineChartGeographics,,,,,,,,,,,$age,$education,$Country,$attentionChartType,$fn\n";
         if(!($attentionChartType==='Line chart')){
             header('Location: ./../NoPayment.php');
         }
